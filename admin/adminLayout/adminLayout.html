@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaterSpot - Admin</title>
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon.png">
+
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="./adminLayout.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- TOP NAVIGATION -->
+      <nav class="admin-nav">
+        <div class="logo">CaterSpot</div>
+
+        <ul class="nav-items">
+          <li data-target="home" class="active">Home</li>
+          <li data-target="menuItems">Menu Items</li>
+          <li data-target="addProduct">Add Product</li>
+          <li data-target="orders">Orders</li>
+          <li data-target="profile">Profile</li>
+        </ul>
+
+        <button class="logout-btn">Logout</button>
+      </nav>
+      <section class="home hidden">Home</section>
+      <section class="menuItems hidden">menuItems</section>
+      <section class="addProduct hidden">addProduct</section>
+      <section class="orders hidden">orders</section>
+      <section class="profile hidden">profile</section>
+    </div>
+    <div id="toast-container"></div>
+    <div id="global-loader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <script src="../../firebase.js" type="module"></script>
+    <script src="./adminLayout.js" type="module"></script>
+  </body>
+</html>

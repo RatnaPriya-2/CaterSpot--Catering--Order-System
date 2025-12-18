@@ -1,0 +1,120 @@
+<div class="add-product">
+  <h2 class="page-title">Add New Product</h2>
+  <div class="loading">Loading...</div>
+
+  <form class="add-product-form" id="addProductForm">
+    <!-- Product Name -->
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input
+        type="text"
+        id="productName"
+        name="productName"
+        placeholder="Enter product name"
+        required
+        minlength="3"
+        maxlength="50"
+        pattern="[A-Za-z\s]+"
+        title="Only letters and spaces allowed"
+      />
+    </div>
+
+    <!-- Category -->
+    <div class="form-group">
+      <label for="productCategory">Category</label>
+      <select id="productCategory" name="productCategory" required>
+        <option value="">Select Category</option>
+        <option value="starters">Starters</option>
+        <option value="main-course">Main Course</option>
+        <option value="desserts">Desserts</option>
+        <option value="beverages">Beverages</option>
+      </select>
+    </div>
+
+    <!-- Price -->
+    <div class="form-group">
+      <label for="productPrice">Price (₹)</label>
+      <input
+        type="number"
+        id="productPrice"
+        name="productPrice"
+        placeholder="Enter price"
+        required
+        min="1"
+        max="10000"
+      />
+    </div>
+
+    <!-- Serves -->
+    <div class="form-group">
+      <label for="productServes">Serves</label>
+      <input
+        type="number"
+        id="productServes"
+        name="productServes"
+        placeholder="Eg: 1, 2, 4"
+        required
+        min="1"
+        max="20"
+      />
+    </div>
+
+    <!-- Total Stock -->
+    <div class="form-group">
+      <label for="stockCapacity">Stock Capacity</label>
+      <input
+        type="number"
+        id="stockCapacity"
+        name="stockCapacity"
+        placeholder="Max stock limit.."
+        required
+        min="1"
+        max="1000"
+      />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="productDesc">Description</label>
+      <textarea
+        id="productDesc"
+        name="productDesc"
+        rows="4"
+        placeholder="Enter product description"
+        required
+        minlength="20"
+        maxlength="300"
+      ></textarea>
+    </div>
+
+    <!-- Small Image URL -->
+    <div class="form-group">
+      <label for="smallImageUrl">Small Image URL (300×300)</label>
+      <input
+        type="url"
+        id="smallImageUrl"
+        name="smallImageUrl"
+        placeholder="https://images.unsplash.com/...?w=300&h=300"
+        required
+        pattern="https://.*"
+        title="Must be a valid HTTPS image URL"
+      />
+    </div>
+
+    <!-- Big Image URL -->
+    <div class="form-group">
+      <label for="bigImageUrl">Big Image URL (600×800)</label>
+      <input
+        type="url"
+        id="bigImageUrl"
+        name="bigImageUrl"
+        placeholder="https://images.unsplash.com/...?w=600&h=800"
+        required
+        pattern="https://.*"
+        title="Must be a valid HTTPS image URL"
+      />
+    </div>
+
+    <button type="button" class="submit-btn">Add Product</button>
+  </form>
+</div>

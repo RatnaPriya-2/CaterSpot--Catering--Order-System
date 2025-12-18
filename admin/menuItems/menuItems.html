@@ -1,0 +1,171 @@
+<div class="menu-page">
+  <h2>Menu Items</h2>
+  <!-- FILTERS -->
+  <div class="menu-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="starters">Starters</button>
+    <button class="filter-btn" data-category="main-course">Main Course</button>
+    <button class="filter-btn" data-category="desserts">Desserts</button>
+    <button class="filter-btn" data-category="beverages">Beverages</button>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="menu-search">
+    <input type="text" class="menu-search-input" placeholder="Search food..." />
+  </div>
+
+  <!--get all out of stock items-->
+  <div class="get-out-of-stock-items">
+    <button type="text" class=" out-of-stock-btn">
+      Get all out of stock items
+    </button>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="menu-grid">
+    <div class="loading">Loading...</div>
+  </div>
+  <!-- WARNING / CONFIRM MODAL -->
+  <div id="confirm-modal" class="confirm-modal hidden">
+    <div class="confirm-box">
+      <h3 class="confirm-title">Confirm Action</h3>
+
+      <p class="confirm-message">
+        Are you sure you want to delete this item?
+        <br />
+        This action cannot be undone.
+      </p>
+
+      <div class="confirm-actions">
+        <button class="btn btn-danger" id="confirmYes">Yes, Delete</button>
+        <button class="btn btn-secondary" id="confirmCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT PRODUCT MODAL -->
+  <div id="edit-product-modal" class="form-modal hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Edit Product</h2>
+        <button class="close-btn" id="closeEditModal">&times;</button>
+      </div>
+
+      <form class="add-product-form" id="editProductForm" data-id="">
+        <!-- Product Name -->
+        <div class="form-group">
+          <label for="editProductName">Product Name</label>
+          <input
+            type="text"
+            id="editProductName"
+            name="productName"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z\s]+"
+          />
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+          <label for="editProductCategory">Category</label>
+          <select id="editProductCategory" name="productCategory" required>
+            <option value="starters">Starters</option>
+            <option value="main-course">Main Course</option>
+            <option value="desserts">Desserts</option>
+            <option value="beverages">Beverages</option>
+          </select>
+        </div>
+
+        <!-- Price -->
+        <div class="form-group">
+          <label for="editProductPrice">Price (₹)</label>
+          <input
+            type="number"
+            id="editProductPrice"
+            name="productPrice"
+            required
+            min="1"
+            max="10000"
+          />
+        </div>
+
+        <!-- Serves -->
+        <div class="form-group">
+          <label for="editProductServes">Serves</label>
+          <input
+            type="number"
+            id="editProductServes"
+            name="productServes"
+            required
+            min="1"
+            max="20"
+          />
+        </div>
+
+        <!-- Total Stock -->
+        <div class="form-group">
+          <label for="editstockCapacity">Stock Capacity</label>
+          <input
+            type="number"
+            id="editstockCapacity"
+            name="stockCapacity"
+            required
+            min="1"
+            max="1000"
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="editProductDesc">Description</label>
+          <textarea
+            id="editProductDesc"
+            name="productDesc"
+            rows="4"
+            required
+            minlength="20"
+            maxlength="300"
+          ></textarea>
+        </div>
+
+        <!-- Small Image -->
+        <div class="form-group">
+          <label for="editSmallImageUrl">Small Image URL</label>
+          <input
+            type="url"
+            id="editSmallImageUrl"
+            name="smallImageUrl"
+            required
+            pattern="https://.*"
+          />
+        </div>
+
+        <!-- Big Image -->
+        <div class="form-group">
+          <label for="editBigImageUrl">Big Image URL</label>
+          <input
+            type="url"
+            id="editBigImageUrl"
+            name="bigImageUrl"
+            required
+            pattern="https://.*"
+          />
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" id="updateProduct" class="submit-btn">
+            Update Product
+          </button>
+          <button
+            type="button"
+            class="btn-secondary cancel-btn"
+            id="cancelEdit"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

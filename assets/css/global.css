@@ -1,0 +1,44 @@
+:root {
+  /* Core Palette */
+  --color-primary: #134074;   /* Deep navy */
+  --color-secondary: #13315c; /* Dark blue */
+  --color-accent: #0b2545;    /* Midnight blue */
+  --color-muted: #8da9c4;     /* Soft steel blue */
+  --color-light: #eef4ed;     /* Off-white */
+  --color-white: #ffffff;     /* Pure white */
+
+  /* Text Colors */
+  --text-dark: #0b2545;
+  --text-light: #eef4ed;
+
+  /* Button Colors */
+  --btn-primary-bg: var(--color-secondary);
+  --btn-primary-hover: var(--color-accent);
+
+  --btn-secondary-bg: var(--color-light);
+  --btn-secondary-hover: var(--color-muted);
+
+  --btn-primary-text: var(--color-light);
+  --btn-secondary-text: var(--color-accent);
+
+  /* Shadows */
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+
+  --box-shadow:0px 0px 4px var(--color-primary);
+  --box-shadow-light:0px 0px 4px var(--color-muted);
+  --box-shadow-large:0px 0px 10px var(--color-primary);
+  --box-shadow-medium:0px 0px 7px var(--color-primary);
+
+  /* Radius & Transitions */
+  --radius: 10px;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}

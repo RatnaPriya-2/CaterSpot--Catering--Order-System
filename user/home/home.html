@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaterSpot - User</title>
+    <link rel="icon" type="image/png" href="../../assets/icons/favicon.png" />
+
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="./home.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- NAVBAR -->
+      <nav class="user-nav">
+        <div class="logo">CaterSpot</div>
+
+        <ul class="nav-items">
+          <li data-target="home" class="active">Home</li>
+          <li data-target="menu">Menu</li>
+          <li data-target="cart">Cart</li>
+          <li data-target="myOrders">My Orders</li>
+          <li data-target="profile">Profile</li>
+        </ul>
+
+        <button class="logout-btn">Logout</button>
+      </nav>
+
+      <!-- HOME CONTENT -->
+      <section class="home-section">
+        <h1>Welcome to the CaterSpot</h1>
+
+        <p>
+          We provide a wide range of food options to suit different tastes and
+          occasions. Our menu includes a variety of
+          <span>starters, main course dishes, desserts, and beverages</span>,
+          carefully prepared to offer a complete meal experience.
+        </p>
+
+        <p>
+          You can explore different food items, add them to your cart, and place
+          orders based on your preference. All orders can be easily tracked, and
+          past orders can be viewed from your account.
+        </p>
+
+        <p class="hint">
+          Use the navigation menu above to browse the menu, manage your cart,
+          and check your order status.
+        </p>
+      </section>
+    </div>
+
+    <div id="toast-container"></div>
+    <div id="global-loader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <script src="../../firebase.js" type="module"></script>
+    <script src="./home.js" type="module"></script>
+  </body>
+</html>

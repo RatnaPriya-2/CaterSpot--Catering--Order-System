@@ -1,0 +1,140 @@
+.profile-page {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  
+}
+
+.profile-page > h2 {
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.fullName {
+  color: var(--color-white);
+}
+
+.profile-header {
+  text-align: center;
+  padding: 30px 0px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.profile-info {
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.info-item span {
+  display: inline-block;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* justify-content: space-between; */
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.value {
+  font-weight: 700;
+  color: var(--color-muted);
+}
+.skeleton {
+  height: 18px;
+  width: 100%;
+  background: var(--color-light);
+  border-radius: 4px;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.skeleton-sm {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+/* Tablets & small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .profile-info {
+    padding: 18px;
+  }
+}
+
+/* Large phones & small tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .profile-header h2 {
+    font-size: 20px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  
+
+  .profile-info {
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
+
+  .info-item {
+    padding: 10px 0;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+}

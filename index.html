@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaterSpot - Catering Order System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="home-nav">
+      <div class="nav-brand">CaterSpot</div>
+      <nav class="nav-links">
+        <a href="./auth/login/login.html">User Login</a>
+        <a href="./auth/login/login.html">Admin Login</a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to <span>CaterSpot</span></h1>
+        <p>Your one-stop catering reservation and food ordering platform.</p>
+
+        <div class="hero-buttons">
+          <a href="./auth/register/register.html?role=admin" class="admin-register-btn"
+            >Admin Register</a
+          >
+          <a href="./auth/register/register.html?role=user" class="user-register-btn"
+            >User Register</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features container">
+      <h2>What We Offer</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Browse Menu</h3>
+          <p>Explore a wide variety of delicious catering dishes.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Easy Booking</h3>
+          <p>Book catering services instantly with a smooth flow.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Order Tracking</h3>
+          <p>Track your orders and stay updated in real-time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+      <p>© <span id="year"></span> CaterSpot • Catering Order System</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+  </body>
+</html>
