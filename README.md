@@ -40,7 +40,7 @@ CaterSpot uses **Firebase Authentication** for secure access:
 
 The project includes a **`data.js` file** that contains:
 - Complete menu item details
-- Food item names, categories, prices, stock values
+- Food item names, categories, prices.
 - Image URLs used across the application
 
 This file acts as a **central data source** and is especially useful for:
@@ -85,3 +85,4 @@ This file acts as a **central data source** and is especially useful for:
 ---
 
 Feel free to explore, test, and modify the project!
+
