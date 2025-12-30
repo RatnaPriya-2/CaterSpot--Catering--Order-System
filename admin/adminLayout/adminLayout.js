@@ -41,6 +41,7 @@ navLinks.forEach((link) => {
     const response = await fetch(`/admin/${target}/${target}.html`);
     const html = await response.text();
     targetSection.innerHTML = html;
+    targetSection.classList.remove("hidden");
 
     // dynamically import JS module
     const module = await import(`/admin/${target}/${target}.js`);
@@ -51,7 +52,6 @@ navLinks.forEach((link) => {
     if (module.default) {
       module.default();
     }
-    targetSection.classList.remove("hidden");
   });
 });
 
