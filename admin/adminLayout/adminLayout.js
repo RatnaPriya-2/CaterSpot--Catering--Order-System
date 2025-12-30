@@ -30,18 +30,26 @@ navLinks.forEach((link) => {
 
     targetSection.classList.remove("hidden");
 
-    // remove old css
-    document.querySelectorAll(".dynamic-css").forEach((css) => css.remove());
+    function loadCSS() {
+      return new Promise((resolve) => {
+        // remove old css
+        document
+          .querySelectorAll(".dynamic-css")
+          .forEach((css) => css.remove());
 
-    // load new css
-    const cssLink = document.createElement("link");
-    cssLink.classList.add("dynamic-css");
-    cssLink.rel = "stylesheet";
-    cssLink.href = `/admin/${target}/${target}.css`;
-    document.head.appendChild(cssLink);
+        // load new css
+        const cssLink = document.createElement("link");
+        cssLink.classList.add("dynamic-css");
+        cssLink.rel = "stylesheet";
+        cssLink.href = `/admin/${target}/${target}.css`;
+        document.head.appendChild(cssLink);
+      });
+    }
+
     // load html
     const response = await fetch(`/admin/${target}/${target}.html`);
     const html = await response.text();
+    await loadCSS();
     targetSection.innerHTML = html;
 
     // dynamically import JS module
