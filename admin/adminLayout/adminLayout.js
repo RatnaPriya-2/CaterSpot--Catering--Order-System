@@ -37,11 +37,11 @@ navLinks.forEach((link) => {
     cssLink.rel = "stylesheet";
     cssLink.href = `/admin/${target}/${target}.css`;
     document.head.appendChild(cssLink);
+    targetSection.classList.remove("hidden");
     // load html
     const response = await fetch(`/admin/${target}/${target}.html`);
     const html = await response.text();
     targetSection.innerHTML = html;
-    targetSection.classList.remove("hidden");
 
     // dynamically import JS module
     const module = await import(`/admin/${target}/${target}.js`);
