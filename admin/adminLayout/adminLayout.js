@@ -30,11 +30,6 @@ navLinks.forEach((link) => {
 
     targetSection.classList.remove("hidden");
 
-    // load html
-    const response = await fetch(`/admin/${target}/${target}.html`);
-    const html = await response.text();
-    targetSection.innerHTML = html;
-
     // remove old css
     document.querySelectorAll(".dynamic-css").forEach((css) => css.remove());
 
@@ -44,6 +39,10 @@ navLinks.forEach((link) => {
     cssLink.rel = "stylesheet";
     cssLink.href = `/admin/${target}/${target}.css`;
     document.head.appendChild(cssLink);
+    // load html
+    const response = await fetch(`/admin/${target}/${target}.html`);
+    const html = await response.text();
+    targetSection.innerHTML = html;
 
     // dynamically import JS module
     const module = await import(`/admin/${target}/${target}.js`);
